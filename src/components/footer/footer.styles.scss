@@ -1,0 +1,23 @@
+.footer {
+    grid-row: 4 / 5;
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: min-content max-content min-content;
+    grid-column-gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-primary-dark-light;
+    color: $color-primary-white;
+
+    padding: .5rem 0;
+
+    &::before, 
+    &::after {
+        content: "";
+        height: 1px;
+        width: 5rem;
+        display: block;
+        background-color: currentColor;
+    }
+}

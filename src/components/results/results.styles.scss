@@ -1,0 +1,63 @@
+.results {
+    grid-row: 3 / 4;
+    grid-column: center-start / center-end;
+
+    background-color: $color-primary-white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tab-port) {
+        margin: 1.9rem 5rem;
+    }
+
+    &--details {
+        margin: .9rem 0;
+        &__quantity {
+            align-self: flex-start;
+        }
+    }
+
+    &--content {
+        margin: 1.9rem 0;
+        width: 100%;
+        display: grid;
+        grid-gap: 5rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));  
+        justify-items: center;
+
+        @include respond(phone) {
+            grid-gap: 2rem;
+            width: 90%;
+        }
+
+    }
+
+    &--pagination {
+        margin: 1.9rem 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__buttons {
+            display: block;
+            padding: .7rem 4rem;
+
+            border: none;
+            border-radius: 100rem;
+
+            background-color: $color-primary-orange;
+            color: $color-primary-white;
+            
+            cursor: pointer;
+        }
+
+        &__prev {
+            margin-right: .3rem;
+        }
+
+        &__next {
+            margin-left: .3rem;
+        }
+    }
+}

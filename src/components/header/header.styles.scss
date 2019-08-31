@@ -1,0 +1,17 @@
+.hedaer {
+    grid-row: 1 / 2;
+    grid-column: center-start / center-end;
+
+    background-color: $color-primary-white;
+
+    display: flex;
+    align-items: center;
+
+    img {
+        padding: .5rem 0;
+
+        @include respond(tab-port) {
+            margin-left: 2rem;
+        }
+    }
+}

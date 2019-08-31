@@ -1,0 +1,15 @@
+//Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/base';
+@import 'abstracts/typography';
+
+//components
+@import '../components/footer/footer.styles.scss';
+@import '../components/header/header.styles.scss';
+@import '../components/results/results.styles.scss';
+@import '../components/song-item/song-item.styles.scss';
+
+@import './app/app';
+
+

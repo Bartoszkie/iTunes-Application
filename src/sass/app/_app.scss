@@ -1,0 +1,54 @@
+.banner {
+    grid-row: 2 / 3;
+    grid-column: full-start / full-end;
+
+    background-color: $color-primary-dark-light;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 2rem 5rem;
+
+    h1 {
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    h4 {
+        @include respond(phone) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .form {
+        margin: 1.5rem 0;
+    
+        &__input {
+            padding: .9rem 2rem;
+            border: none;
+            border-radius: 2rem 0 0 2rem;
+
+            @include respond(phone) {
+                width: 70%;
+            }
+        }
+
+        &__submit {
+            padding: .9rem 2rem;
+            border: none;
+            border-radius: 0 2rem 2rem 0;
+            background-color: $color-primary-orange;
+            color: $color-primary-white;
+            cursor: pointer;
+
+            @include respond(phone) {
+                width: 30%;
+            }
+        }
+    }
+}
