@@ -2,7 +2,13 @@ import React from "react";
 import SongItem from "../song-item/song-item.component";
 
 const Results = ({ posts, loading, length, currentPage, prev, next }) => {
-
+  if (loading) {
+    return (
+      <div className="popup">
+        <h1 className="popup__heading">Loading...</h1>
+      </div>
+    );
+  }
 
   console.log("posts: ", length);
 
