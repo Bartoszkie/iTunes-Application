@@ -23,7 +23,7 @@ const Results = ({ posts, loading, length, currentPage, prev, next }) => {
       ) : null}
       <div className="results--content">
         {posts
-          .filter((item, index) => index < 9)
+         
           .map(item => (
             <SongItem key={item.trackId} details={item} />
           ))}
