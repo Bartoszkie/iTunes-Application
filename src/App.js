@@ -28,12 +28,10 @@ const App = () => {
     fetchPosts();
   }, [submit]);
 
-  //GET 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-  //Paginate functions
   const nextButton = currentPage => {
     if(currentPosts.length >= 9)
       setCurrentPage(currentPage + 1)
@@ -53,8 +51,6 @@ const App = () => {
 
     setSubmit(submit + 1);
   };
-
-  console.log('current posts', currentPosts);
   return (
     <div className="content">
       <Header />

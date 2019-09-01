@@ -9,9 +9,6 @@ const Results = ({ posts, loading, length, currentPage, prev, next }) => {
       </div>
     );
   }
-
-  console.log("posts: ", length);
-
   return (
     <div className="results">
       {length > 0 ? (
@@ -23,7 +20,6 @@ const Results = ({ posts, loading, length, currentPage, prev, next }) => {
       ) : null}
       <div className="results--content">
         {posts
-         
           .map(item => (
             <SongItem key={item.trackId} details={item} />
           ))}
