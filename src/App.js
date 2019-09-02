@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import Header from "./components/header/header.component";
@@ -9,36 +9,40 @@ import "./sass/_main.scss";
 
 const App = () => {
   const [input, setInput] = useState("");
-  const [submit, setSubmit] = useState(0);
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(9);
+  const postsPerPage = 9;
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      setLoading(true);
-      const res = await axios.get(
-        `https://itunes.apple.com/search?term=${input}&media=music&limit=200&entity=song`
-      );
+  const fetchPosts = async () => {
+    setLoading(true);
+    const res = await axios.get(
+      `https://itunes.apple.com/search?term=${input}&media=music&limit=200&entity=song`
+    );
+    if (res.data.results.length === 0) {
+      setPosts(["EMPTY"]);
+    } else {
+      setCurrentPage(1);
+      setPosts([]);
       setPosts(res.data.results);
-      setLoading(false);
-    };
-
-    fetchPosts();
-  }, [submit]);
+    }
+    setLoading(false);
+  };
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+  const pages = Math.ceil(posts.length / 9);
 
-  const nextButton = currentPage => {
-    if(currentPosts.length >= 9)
-      setCurrentPage(currentPage + 1)
+  const nextButton = () => {
+    if(currentPage < pages){
+      setCurrentPage(currentPage + 1);
+    }
   };
-  const prevButton = currentPage => {
-    if(currentPage > 1){
-      setCurrentPage(currentPage - 1)
+
+  const prevButton = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
     }
   };
 
@@ -48,9 +52,9 @@ const App = () => {
 
   const onSubmit = event => {
     event.preventDefault();
-
-    setSubmit(submit + 1);
+    fetchPosts();
   };
+
   return (
     <div className="content">
       <Header />
@@ -64,7 +68,7 @@ const App = () => {
             placeholder="Search songs..."
           />
           <button type="submit" className="form__submit">
-            szukaj
+            search
           </button>
         </form>
         <h4 className="heading--2">
@@ -75,7 +79,7 @@ const App = () => {
       <Results
         posts={currentPosts}
         loading={loading}
-        length={posts.length}
+        lengthOfPosts={posts.length}
         currentPage={currentPage}
         prev={prevButton}
         next={nextButton}

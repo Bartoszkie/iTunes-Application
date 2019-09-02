@@ -8,6 +8,8 @@
     text-align: center;
     align-items: center;
 
+    overflow: hidden;
+
     border: 1px solid transparent;
     background-color: $color-primary-grey;
     transition: .2s ease-in-out all;

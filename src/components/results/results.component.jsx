@@ -1,7 +1,7 @@
 import React from "react";
 import SongItem from "../song-item/song-item.component";
 
-const Results = ({ posts, loading, length, currentPage, prev, next }) => {
+const Results = ({ posts, loading, lengthOfPosts, currentPage, prev, next }) => {
   if (loading) {
     return (
       <div className="popup">
@@ -9,22 +9,34 @@ const Results = ({ posts, loading, length, currentPage, prev, next }) => {
       </div>
     );
   }
+
   return (
     <div className="results">
-      {length > 0 ? (
+    {
+      posts[0] === 'EMPTY' ? (
+        <div className="results--details">
+        <span className="results--details__quantity">
+          Sorry, no matches found
+        </span>
+      </div>
+      ) : null
+    }
+      {lengthOfPosts > 0 && !posts.includes('EMPTY') ? (
         <div className="results--details">
           <span className="results--details__quantity">
-            Found {length} results
+            Found {lengthOfPosts} results
           </span>
         </div>
       ) : null}
       <div className="results--content">
-        {posts
+        {posts.length > 0 && !posts.includes('EMPTY') ? (
+          posts
           .map(item => (
             <SongItem key={item.trackId} details={item} />
-          ))}
+          ))) : null
+        }
       </div>
-      {length > 9 ? (
+      {lengthOfPosts > 9 ? (
         <div className="results--pagination">
           <button
             type="button"
