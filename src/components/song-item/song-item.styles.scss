@@ -50,7 +50,20 @@
         flex-direction: column;
 
         &--song-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-size: 1.5rem;
+            font-weight: bold;
+
+            &::after {
+                content: ""; 
+                display: block;
+                height: 1px;
+                width: 50%;
+                margin: .3rem;
+                background-color: rgba(114, 114, 114, 0.445);
+            }
         }
 
         &--artist-title {
