@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pgs-itunes/static/css/main.c4564370.chunk.css",
-    "main.js": "/pgs-itunes/static/js/main.d3cfacca.chunk.js",
-    "main.js.map": "/pgs-itunes/static/js/main.d3cfacca.chunk.js.map",
-    "runtime~main.js": "/pgs-itunes/static/js/runtime~main.7250b933.js",
-    "runtime~main.js.map": "/pgs-itunes/static/js/runtime~main.7250b933.js.map",
-    "static/js/2.04ebc792.chunk.js": "/pgs-itunes/static/js/2.04ebc792.chunk.js",
-    "static/js/2.04ebc792.chunk.js.map": "/pgs-itunes/static/js/2.04ebc792.chunk.js.map",
-    "index.html": "/pgs-itunes/index.html",
-    "precache-manifest.52ab2558daa50726f8740170253be946.js": "/pgs-itunes/precache-manifest.52ab2558daa50726f8740170253be946.js",
-    "service-worker.js": "/pgs-itunes/service-worker.js",
-    "static/css/main.c4564370.chunk.css.map": "/pgs-itunes/static/css/main.c4564370.chunk.css.map"
+    "main.css": "/PGS-Software---iTunes/static/css/main.c4564370.chunk.css",
+    "main.js": "/PGS-Software---iTunes/static/js/main.bbc1fc4f.chunk.js",
+    "main.js.map": "/PGS-Software---iTunes/static/js/main.bbc1fc4f.chunk.js.map",
+    "runtime~main.js": "/PGS-Software---iTunes/static/js/runtime~main.bdaa49a9.js",
+    "runtime~main.js.map": "/PGS-Software---iTunes/static/js/runtime~main.bdaa49a9.js.map",
+    "static/js/2.04ebc792.chunk.js": "/PGS-Software---iTunes/static/js/2.04ebc792.chunk.js",
+    "static/js/2.04ebc792.chunk.js.map": "/PGS-Software---iTunes/static/js/2.04ebc792.chunk.js.map",
+    "index.html": "/PGS-Software---iTunes/index.html",
+    "precache-manifest.a30619168f8963cd072da351505e1134.js": "/PGS-Software---iTunes/precache-manifest.a30619168f8963cd072da351505e1134.js",
+    "service-worker.js": "/PGS-Software---iTunes/service-worker.js",
+    "static/css/main.c4564370.chunk.css.map": "/PGS-Software---iTunes/static/css/main.c4564370.chunk.css.map"
   }
 }
