@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pgs-itunes/static/css/main.c4564370.chunk.css",
+    "main.js": "/pgs-itunes/static/js/main.d3cfacca.chunk.js",
+    "main.js.map": "/pgs-itunes/static/js/main.d3cfacca.chunk.js.map",
+    "runtime~main.js": "/pgs-itunes/static/js/runtime~main.7250b933.js",
+    "runtime~main.js.map": "/pgs-itunes/static/js/runtime~main.7250b933.js.map",
+    "static/js/2.04ebc792.chunk.js": "/pgs-itunes/static/js/2.04ebc792.chunk.js",
+    "static/js/2.04ebc792.chunk.js.map": "/pgs-itunes/static/js/2.04ebc792.chunk.js.map",
+    "index.html": "/pgs-itunes/index.html",
+    "precache-manifest.52ab2558daa50726f8740170253be946.js": "/pgs-itunes/precache-manifest.52ab2558daa50726f8740170253be946.js",
+    "service-worker.js": "/pgs-itunes/service-worker.js",
+    "static/css/main.c4564370.chunk.css.map": "/pgs-itunes/static/css/main.c4564370.chunk.css.map"
+  }
+}
